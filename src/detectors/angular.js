@@ -1,4 +1,4 @@
-const { hasRequiredDeps, hasRequiredFiles, getYarnOrNPMCommand, scanScripts } = require('./utils/jsdetect')
+const { hasRequiredDeps, hasRequiredFiles, scanScripts } = require('./utils/jsdetect')
 
 module.exports = function() {
   // REQUIRED FILES
@@ -21,7 +21,6 @@ module.exports = function() {
 
   return {
     type: '@angular/cli',
-    command: getYarnOrNPMCommand(),
     port: 8888,
     proxyPort: 4200,
     env: { ...process.env },
